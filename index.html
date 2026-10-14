@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-i18n-attr="content=meta.description" content="Mary is an educator specializing in personalized learning, English education, and educational program design.">
+  <title>Mary | Educator & Learning Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply the saved theme and language before first paint to avoid a flash
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+      const savedLang = localStorage.getItem("lang");
+      const lang = savedLang || (/^zh/i.test(navigator.language) ? "zh" : "en");
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    } catch (error) {}
+  </script>
+  <script src="translations.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">MARY.</a>
+    <nav id="main-nav" aria-label="Main navigation" data-i18n-attr="aria-label=nav.label">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#assessment" data-i18n="nav.assessment">Assessment</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-controls">
+      <button class="icon-button lang-toggle" type="button" aria-label="切换到中文" lang="zh-CN">中</button>
+      <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+      <button class="icon-button menu-toggle" type="button" aria-label="Open menu"
+        aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">EDUCATION · LEARNING DESIGN · CURRICULUM</p>
+        <h1 data-i18n="hero.title">Designing Learning Experiences That Help Learners Grow.</h1>
+        <p class="hero-text" data-i18n="hero.text">
+          I am an educator with a background in education and educational
+          technology, specializing in personalized learning, English education,
+          and the design of meaningful learning experiences.
+        </p>
+        <a class="button" href="#contact" data-i18n="hero.cta">Let's Connect <span>↗</span></a>
+        <p class="hero-note" data-i18n="hero.note">Education-informed. Learner-centered. Evidence-aware.</p>
+      </div>
+
+      <figure class="hero-photo">
+        <img src="images/mary.png" alt="Portrait of Mary" data-i18n-attr="alt=hero.photoAlt"
+          width="480" height="567" fetchpriority="high">
+        <div class="photo-placeholder" aria-hidden="true">M</div>
+      </figure>
+    </section>
+
+    <section class="section" id="about">
+      <p class="eyebrow" data-i18n="about.eyebrow">01 / ABOUT</p>
+      <h2 data-i18n="about.title">Understanding learners. Designing for growth.</h2>
+      <div class="section-copy">
+        <p data-i18n="about.p1">
+          My work combines classroom teaching experience with a foundation
+          in education and educational technology. I am interested in
+          understanding how learners learn, identifying individual needs,
+          and designing learning experiences that connect clear goals
+          with practical teaching strategies.
+        </p>
+        <p data-i18n="about.p2">
+          Beyond classroom instruction, I have experience in homeroom
+          leadership, English drama, project-based learning, and the
+          integration of technology into teaching.
+        </p>
+        <p data-i18n="about.p3">
+          I am continuing to develop my practice in personalized learning
+          design, curriculum development, and educational programs.
+        </p>
+      </div>
+    </section>
+
+    <section class="section tinted" id="expertise">
+      <p class="eyebrow" data-i18n="expertise.eyebrow">02 / EXPERTISE</p>
+      <h2 data-i18n="expertise.title">Areas of Practice</h2>
+
+      <div class="card-grid">
+        <article class="info-card">
+          <span class="card-number">01</span>
+          <h3 data-i18n="expertise.personalized.title">Personalized Learning</h3>
+          <p data-i18n="expertise.personalized.text">
+            Designing learning plans around learners' current abilities,
+            goals, needs, and interests.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">02</span>
+          <h3 data-i18n="expertise.english.title">English Education</h3>
+          <p data-i18n="expertise.english.text">
+            Primary English instruction, language skills development,
+            leveled reading, and preparation for YLE, KET, and PET.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">03</span>
+          <h3 data-i18n="expertise.design.title">Curriculum & Learning Design</h3>
+          <p data-i18n="expertise.design.text">
+            Connecting learning objectives, instructional activities,
+            assessment, and learner feedback.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">04</span>
+          <h3 data-i18n="expertise.projects.title">Educational Projects</h3>
+          <p data-i18n="expertise.projects.text">
+            English drama, speaking projects, technology-enhanced teaching,
+            and project-based learning activities.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <p class="eyebrow" data-i18n="services.eyebrow">03 / SERVICES</p>
+      <h2 data-i18n="services.title">Courses & Services</h2>
+
+      <div class="filter-bar" role="group" aria-label="Filter services by category"
+        data-i18n-attr="aria-label=services.filterLabel">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">All</button>
+        <button class="filter-button" type="button" data-filter="english" aria-pressed="false" data-i18n="filter.english">English</button>
+        <button class="filter-button" type="button" data-filter="exam" aria-pressed="false" data-i18n="filter.exam">Exam Prep</button>
+        <button class="filter-button" type="button" data-filter="design" aria-pressed="false" data-i18n="filter.design">Learning Design</button>
+        <button class="filter-button" type="button" data-filter="projects" aria-pressed="false" data-i18n="filter.projects">Projects</button>
+      </div>
+      <p class="filter-status" aria-live="polite"></p>
+
+      <div class="service-grid">
+        <article class="info-card service-card" id="service-tutoring" data-category="english">
+          <span class="card-tag" data-i18n="filter.english">English</span>
+          <h3 data-i18n="service.tutoring.title">Primary English Tutoring</h3>
+          <p data-i18n="service.tutoring.text">Building vocabulary, grammar, reading, and writing skills
+            through structured, engaging lessons.</p>
+          <p class="service-meta" data-i18n="service.tutoring.meta">Ages 6–12 · 1-on-1 or small group</p>
+        </article>
+
+        <article class="info-card service-card" id="service-reading" data-category="english">
+          <span class="card-tag" data-i18n="filter.english">English</span>
+          <h3 data-i18n="service.reading.title">Leveled Reading Program</h3>
+          <p data-i18n="service.reading.text">Matching learners with books at the right level and growing
+            fluency, comprehension, and a habit of reading.</p>
+          <p class="service-meta" data-i18n="service.reading.meta">Ages 6–12 · Small group</p>
+        </article>
+
+        <article class="info-card service-card" id="service-exam" data-category="exam">
+          <span class="card-tag" data-i18n="filter.exam">Exam Prep</span>
+          <h3 data-i18n="service.exam.title">YLE / KET / PET Preparation</h3>
+          <p data-i18n="service.exam.text">Targeted practice across reading, writing, listening, and
+            speaking, with mock tests and progress feedback.</p>
+          <p class="service-meta" data-i18n="service.exam.meta">Ages 7–14 · 1-on-1 or small group</p>
+        </article>
+
+        <article class="info-card service-card" id="service-plan" data-category="design">
+          <span class="card-tag" data-i18n="filter.design">Learning Design</span>
+          <h3 data-i18n="service.plan.title">Personalized Learning Plan</h3>
+          <p data-i18n="service.plan.text">An assessment of current abilities and goals, followed by a
+            clear, step-by-step plan tailored to the learner.</p>
+          <p class="service-meta" data-i18n="service.plan.meta">All ages · Consultation</p>
+        </article>
+
+        <article class="info-card service-card" id="service-curriculum" data-category="design">
+          <span class="card-tag" data-i18n="filter.design">Learning Design</span>
+          <h3 data-i18n="service.curriculum.title">Curriculum & Program Design</h3>
+          <p data-i18n="service.curriculum.text">Aligning objectives, activities, and assessment for schools,
+            teachers, and educational programs.</p>
+          <p class="service-meta" data-i18n="service.curriculum.meta">Schools & educators · Consultation</p>
+        </article>
+
+        <article class="info-card service-card" id="service-drama" data-category="projects english">
+          <span class="card-tag" data-i18n="filter.projects">Projects</span>
+          <h3 data-i18n="service.drama.title">English Drama Workshop</h3>
+          <p data-i18n="service.drama.text">Script reading, rehearsal, and performance that build
+            confidence, pronunciation, and teamwork.</p>
+          <p class="service-meta" data-i18n="service.drama.meta">Ages 8–12 · Workshop</p>
+        </article>
+
+        <article class="info-card service-card" id="service-speaking" data-category="projects">
+          <span class="card-tag" data-i18n="filter.projects">Projects</span>
+          <h3 data-i18n="service.speaking.title">Speaking & Presentation Projects</h3>
+          <p data-i18n="service.speaking.text">Project-based tasks where learners research, create, and
+            present in English.</p>
+          <p class="service-meta" data-i18n="service.speaking.meta">Ages 9–14 · Small group</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tinted" id="assessment">
+      <p class="eyebrow" data-i18n="assessment.eyebrow">04 / ASSESSMENT</p>
+      <h2 data-i18n="assessment.title">Find the right learning path</h2>
+      <p class="section-intro" data-i18n="assessment.intro">Answer four quick questions to get a recommendation.</p>
+
+      <form class="assessment" novalidate>
+        <div class="assessment-progress" aria-hidden="true"><span></span></div>
+        <p class="assessment-step-label" aria-live="polite">Question 1 of 4</p>
+
+        <fieldset class="assessment-step" data-step="0">
+          <legend data-i18n="q.age">Who is the learner?</legend>
+          <label><input type="radio" name="age" value="young"> <span data-i18n="q.age.young">Child, ages 6–9</span></label>
+          <label><input type="radio" name="age" value="older"> <span data-i18n="q.age.older">Child, ages 10–12</span></label>
+          <label><input type="radio" name="age" value="teen"> <span data-i18n="q.age.teen">Teenager, 13+</span></label>
+          <label><input type="radio" name="age" value="educator"> <span data-i18n="q.age.educator">A school or educator</span></label>
+        </fieldset>
+
+        <fieldset class="assessment-step" data-step="1" hidden>
+          <legend data-i18n="q.goal">What is the main goal?</legend>
+          <label><input type="radio" name="goal" value="everyday"> <span data-i18n="q.goal.everyday">Stronger everyday English</span></label>
+          <label><input type="radio" name="goal" value="exam"> <span data-i18n="q.goal.exam">Prepare for YLE, KET, or PET</span></label>
+          <label><input type="radio" name="goal" value="speaking"> <span data-i18n="q.goal.speaking">Build speaking confidence</span></label>
+          <label><input type="radio" name="goal" value="program"> <span data-i18n="q.goal.program">Design a course or program</span></label>
+        </fieldset>
+
+        <fieldset class="assessment-step" data-step="2" hidden>
+          <legend data-i18n="q.level">What is the current English level?</legend>
+          <label><input type="radio" name="level" value="beginner"> <span data-i18n="q.level.beginner">Beginner</span></label>
+          <label><input type="radio" name="level" value="elementary"> <span data-i18n="q.level.elementary">Elementary</span></label>
+          <label><input type="radio" name="level" value="intermediate"> <span data-i18n="q.level.intermediate">Intermediate or above</span></label>
+          <label><input type="radio" name="level" value="na"> <span data-i18n="q.level.na">Not applicable</span></label>
+        </fieldset>
+
+        <fieldset class="assessment-step" data-step="3" hidden>
+          <legend data-i18n="q.format">Which format do you prefer?</legend>
+          <label><input type="radio" name="format" value="one"> <span data-i18n="q.format.one">1-on-1 lessons</span></label>
+          <label><input type="radio" name="format" value="group"> <span data-i18n="q.format.group">Small group</span></label>
+          <label><input type="radio" name="format" value="workshop"> <span data-i18n="q.format.workshop">Workshop or project</span></label>
+          <label><input type="radio" name="format" value="consult"> <span data-i18n="q.format.consult">Consultation</span></label>
+        </fieldset>
+
+        <p class="assessment-error" role="alert"></p>
+
+        <div class="assessment-actions">
+          <button class="button button-ghost" type="button" data-action="back" hidden data-i18n="assessment.back">← Back</button>
+          <button class="button" type="button" data-action="next">Next →</button>
+        </div>
+
+        <div class="assessment-result" hidden tabindex="-1">
+          <p class="eyebrow" data-i18n="assessment.resultEyebrow">YOUR RECOMMENDATION</p>
+          <h3 class="result-title"></h3>
+          <p class="result-text"></p>
+          <p class="result-also"></p>
+          <div class="assessment-actions">
+            <button class="button" type="button" data-action="view" data-i18n="assessment.view">View this service</button>
+            <a class="button button-ghost result-mail" href="#" data-i18n="assessment.mail">Email my results ↗</a>
+            <button class="text-button" type="button" data-action="restart" data-i18n="assessment.restart">Start over</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="section" id="experience">
+      <p class="eyebrow" data-i18n="experience.eyebrow">05 / EXPERIENCE</p>
+      <h2 data-i18n="experience.title">Education & Professional Experience</h2>
+
+      <h3 class="subheading" data-i18n="experience.education">Education</h3>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="date" data-i18n="edu.hku.date">2018 — 2019 · Hong Kong</p>
+          <h3 data-i18n="edu.hku.name">The University of Hong Kong</h3>
+          <p data-i18n="edu.hku.degree">Master of Information Technology in Education</p>
+        </article>
+
+        <article class="timeline-item">
+          <p class="date" data-i18n="edu.swu.date">2014 — 2018 · Chongqing</p>
+          <h3 data-i18n="edu.swu.name">Southwest University</h3>
+          <p data-i18n="edu.swu.degree">Bachelor of Education; English minor</p>
+        </article>
+
+        <article class="timeline-item">
+          <p class="date" data-i18n="edu.ubc.date">February 2017 · Canada</p>
+          <h3 data-i18n="edu.ubc.name">University of British Columbia</h3>
+          <p data-i18n="edu.ubc.degree">Intensive International Immersion Teacher Education Program</p>
+        </article>
+
+        <article class="timeline-item">
+          <p class="date" data-i18n="edu.waikato.date">July — August 2016 · New Zealand</p>
+          <h3 data-i18n="edu.waikato.name">University of Waikato</h3>
+          <p data-i18n="edu.waikato.degree">New Zealand School Experience Program</p>
+        </article>
+      </div>
+
+      <h3 class="subheading" data-i18n="experience.teaching">Teaching Experience</h3>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="date" data-i18n="job.lizhong.date">February 2021 — Present · Shenzhen</p>
+          <h3 data-i18n="job.lizhong.name">Lizhong School</h3>
+          <p class="role" data-i18n="job.lizhong.role">English Teacher · Homeroom Teacher ·
+            English Grade Leader · Drama Club Coach</p>
+          <ul>
+            <li data-i18n="job.lizhong.1">Teach English to Grades 3–6 and serve as a homeroom teacher.</li>
+            <li data-i18n="job.lizhong.2">Lead the school's English drama team and design speaking-focused projects.</li>
+            <li data-i18n="job.lizhong.3">Helped a newly assigned class progress from second-to-last
+              to first place in the grade within one semester.</li>
+            <li data-i18n="job.lizhong.4">Guided students preparing for YLE, KET, and PET examinations.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item">
+          <p class="date" data-i18n="job.fuyuan.date">September 2019 — February 2020 · Shenzhen</p>
+          <h3 data-i18n="job.fuyuan.name">Fuyuan Primary School</h3>
+          <p class="role" data-i18n="job.fuyuan.role">General Subject Teacher & Homeroom Teacher</p>
+          <ul>
+            <li data-i18n="job.fuyuan.1">Taught English, Mathematics, and Science in Grade 1.</li>
+            <li data-i18n="job.fuyuan.2">Received second prize in the school's teaching competition.</li>
+            <li data-i18n="job.fuyuan.3">Received the Class Information Technology Leadership Award.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item">
+          <p class="date" data-i18n="job.welcome.date">August 2016 · Hamilton, New Zealand</p>
+          <h3 data-i18n="job.welcome.name">Welcome Bay School</h3>
+          <p class="role" data-i18n="job.welcome.role">Intern Teacher for Lower Grades</p>
+          <ul>
+            <li data-i18n="job.welcome.1">Observed classroom teaching and taught simple Chinese
+              characters, songs, and counting to students aged 5–7.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tinted" id="achievements">
+      <p class="eyebrow" data-i18n="achievements.eyebrow">06 / RECOGNITION</p>
+      <h2 data-i18n="achievements.title">Selected Achievements</h2>
+      <ul class="achievement-list">
+        <li>
+          <span>2022</span>
+          <div>
+            <h3 data-i18n="award.first">First Prize</h3>
+            <p data-i18n="award.homeroom">Futian District Homeroom Teacher Skills Competition</p>
+          </div>
+        </li>
+        <li>
+          <span>2021</span>
+          <div>
+            <h3 data-i18n="award.first">First Prize</h3>
+            <p data-i18n="award.microlesson">Futian District Micro-lesson Competition</p>
+          </div>
+        </li>
+        <li>
+          <span>2020</span>
+          <div>
+            <h3 data-i18n="award.instructor">Outstanding Instructor</h3>
+            <p data-i18n="award.uca">Coached students to win National First Prize in the
+              14th UCA "Star of Hope" competition.</p>
+          </div>
+        </li>
+        <li>
+          <span>2020</span>
+          <div>
+            <h3 data-i18n="award.third">Third Prize</h3>
+            <p data-i18n="award.essay">Futian District "Online Teaching" Essay Competition</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="qualifications">
+      <p class="eyebrow" data-i18n="qualifications.eyebrow">07 / QUALIFICATIONS</p>
+      <h2 data-i18n="qualifications.title">Education & Credentials</h2>
+      <div class="credential-list">
+        <p>CELTA</p>
+        <p data-i18n="qualifications.teacherCert">High School English Teacher Qualification Certificate (China)</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <p class="eyebrow" data-i18n="contact.eyebrow">08 / CONTACT</p>
+      <h2 data-i18n="contact.title">Let's create better learning experiences.</h2>
+      <p data-i18n="contact.text">
+        I welcome conversations about personalized learning,
+        English education, curriculum design, and educational projects.
+      </p>
+      <a class="button" href="mailto:123456@qq.com" data-i18n="contact.cta">
+        Get in Touch <span>↗</span>
+      </a>
+      <p class="contact-detail">123456@qq.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Mary. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    <a href="#home" data-i18n="footer.top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
